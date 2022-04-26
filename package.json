@@ -1,0 +1,57 @@
+{
+  "name": "mui-component-library",
+  "description": "MUI Component Library",
+  "version": "0.1.0",
+  "author": "Alex Eagleson",
+  "license": "UNLICENSED",
+  "private": "true",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "npm run clean && node build.js && tsc",
+    "clean": "rimraf dist",
+    "lint": "npx eslint . --ext .tsx --ext .ts",
+    "prettier": "prettier --write .",
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.6.3",
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@storybook/addon-essentials": "^6.5.0-alpha.64",
+    "@storybook/addon-interactions": "^6.5.0-alpha.64",
+    "@storybook/addon-links": "^6.5.0-alpha.64",
+    "@storybook/builder-webpack5": "^6.5.0-alpha.64",
+    "@storybook/manager-webpack5": "^6.5.0-alpha.64",
+    "@storybook/react": "^6.5.0-alpha.64",
+    "@testing-library/react": "^13.1.1",
+    "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "babel-loader": "^8.2.5",
+    "esbuild": "^0.14.38",
+    "eslint": "^8.14.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-storybook": "^0.5.11",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.3"
+  }
+}
