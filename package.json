@@ -11,6 +11,10 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "npm run clean && node build.js && tsc",
