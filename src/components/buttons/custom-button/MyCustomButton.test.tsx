@@ -3,5 +3,5 @@ import MyCustomButton from './MyCustomButton';
 
 it('renders MyCustomButton', () => {
   render(<MyCustomButton />);
-  expect(screen.getByText(/hello/i)).toBeTruthy();
+  expect(screen.getByText(/custom button/i)).toBeTruthy();
 });
