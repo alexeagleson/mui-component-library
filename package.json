@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "author": "Alex Eagleson",
   "license": "MIT",
-  "private": "true",
+  "private": false,
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
