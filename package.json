@@ -1,7 +1,7 @@
 {
   "name": "mui-component-library",
   "description": "MUI Component Library",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Alex Eagleson",
   "license": "MIT",
   "private": false,
@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
+    "@changesets/cli": "^2.22.0",
     "@storybook/addon-essentials": "^6.5.0-alpha.64",
     "@storybook/addon-interactions": "^6.5.0-alpha.64",
     "@storybook/addon-links": "^6.5.0-alpha.64",
