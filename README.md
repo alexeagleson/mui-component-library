@@ -27,3 +27,13 @@ This is expected and all current dependencies work fine on 18.
 ### Review components in Storybook:
 
 - `npm run storybook`
+
+### Publish
+
+- `npx changeset`
+- `npx changeset version`
+- `npx changeset publish`
+
+## Based on
+
+https://www.hacketts.dev/blog/how-to-create-a-react-component-library#adding-esbuild

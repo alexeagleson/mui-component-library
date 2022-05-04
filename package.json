@@ -1,7 +1,7 @@
 {
   "name": "mui-component-library",
   "description": "MUI Component Library",
-  "version": "0.1.1",
+  "version": "0.1.9",
   "author": "Alex Eagleson",
   "license": "MIT",
   "private": false,
@@ -17,7 +17,7 @@
   },
   "scripts": {
     "prepublishOnly": "npm run build",
-    "build": "npm run clean && node build.js && tsc",
+    "build": "npm run clean && node esbuild.mjs && tsc",
     "clean": "rimraf dist",
     "lint": "npx eslint . --ext .tsx --ext .ts",
     "prettier": "prettier --write .",
@@ -25,12 +25,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prepare": "husky install"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@mui/material": "^5.6.3",
-    "react": "^18.0.0"
   },
   "peerDependencies": {
     "@emotion/react": "^11.9.0",
@@ -41,18 +35,20 @@
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@changesets/cli": "^2.22.0",
-    "@storybook/addon-essentials": "^6.5.0-alpha.64",
-    "@storybook/addon-interactions": "^6.5.0-alpha.64",
-    "@storybook/addon-links": "^6.5.0-alpha.64",
-    "@storybook/builder-webpack5": "^6.5.0-alpha.64",
-    "@storybook/manager-webpack5": "^6.5.0-alpha.64",
-    "@storybook/react": "^6.5.0-alpha.64",
+    "@mdx-js/react": "^2.1.1",
+    "@storybook/addon-essentials": "^6.5.0-beta.3",
+    "@storybook/addon-interactions": "^6.5.0-beta.3",
+    "@storybook/addon-links": "^6.5.0-beta.3",
+    "@storybook/builder-webpack5": "^6.5.0-beta.3",
+    "@storybook/manager-webpack5": "^6.5.0-beta.3",
+    "@storybook/react": "^6.5.0-beta.3",
     "@testing-library/react": "^13.1.1",
     "@types/jest": "^27.4.1",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
     "babel-loader": "^8.2.5",
     "esbuild": "^0.14.38",
+    "esbuild-node-externals": "^1.4.1",
     "eslint": "^8.14.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
@@ -65,6 +61,7 @@
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.1.4",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.3",
+    "webpack": "^5.72.0"
   }
 }
